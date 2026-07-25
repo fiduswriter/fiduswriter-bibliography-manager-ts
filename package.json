@@ -49,6 +49,7 @@
     "css/",
     "dist/",
     "src/",
+    "locale/*/messages.json",
     "LICENSE",
     "README.md",
     "logo.svg"

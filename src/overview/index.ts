@@ -86,7 +86,7 @@ export class BibliographyOverview {
         this.dom = this.container
         this.dom.innerHTML = bibliographyOverviewTemplate()
         ensureCSS([
-            staticUrl("css/bibliography.css"),
+            staticUrl("css/bibliography/bibliography.css"),
             staticUrl("css/prosemirror.css"),
             staticUrl("css/inline_tools.css")
         ])

@@ -2,6 +2,18 @@
   "name": "@fiduswriter/bibliography-manager",
   "version": "0.1.27",
   "description": "Fidus Writer bibliography manager",
+  "keywords": [
+    "fiduswriter",
+    "bibliography",
+    "citations",
+    "bibtex",
+    "csl",
+    "reference-manager"
+  ],
+  "homepage": "https://codeberg.org/fiduswriter/fiduswriter-bibliography-manager-js#readme",
+  "bugs": {
+    "url": "https://codeberg.org/fiduswriter/fiduswriter-bibliography-manager-js/issues"
+  },
   "repository": {
     "type": "git",
     "url": "ssh://git@codeberg.org/fiduswriter/fiduswriter-bibliography-manager-js.git"

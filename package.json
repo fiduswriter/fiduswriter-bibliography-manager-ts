@@ -10,13 +10,13 @@
     "csl",
     "reference-manager"
   ],
-  "homepage": "https://codeberg.org/fiduswriter/fiduswriter-bibliography-manager-js#readme",
+  "homepage": "https://codeberg.org/fiduswriter/fiduswriter-bibliography-manager-ts#readme",
   "bugs": {
-    "url": "https://codeberg.org/fiduswriter/fiduswriter-bibliography-manager-js/issues"
+    "url": "https://codeberg.org/fiduswriter/fiduswriter-bibliography-manager-ts/issues"
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@codeberg.org/fiduswriter/fiduswriter-bibliography-manager-js.git"
+    "url": "ssh://git@codeberg.org/fiduswriter/fiduswriter-bibliography-manager-ts.git"
   },
   "license": "AGPL-3.0",
   "author": "Johannes Wilm",

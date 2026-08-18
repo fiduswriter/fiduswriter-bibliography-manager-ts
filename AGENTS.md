@@ -9,7 +9,7 @@ connector.
 
 - Package name: `@fiduswriter/bibliography-manager`
 - License: `AGPL-3.0`
-- Repository: `https://codeberg.org/fiduswriter/fiduswriter-bibliography-manager.git`
+- Repository: `https://git.fiduswriter.org/fiduswriter/fiduswriter-bibliography-manager-ts.git`
 - Author: Johannes Wilm
 
 ## Scope

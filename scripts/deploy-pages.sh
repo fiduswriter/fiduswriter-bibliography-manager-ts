@@ -24,7 +24,6 @@ cp "$ROOT/demo/logo.svg" "$BUILD_DIR/"
 cp "$ROOT/demo/sample-bibliography.json" "$BUILD_DIR/"
 cp -r "$ROOT/demo/css" "$BUILD_DIR/"
 cp -r "$ROOT/demo/workers" "$BUILD_DIR/"
-cp -r "$ROOT/demo/vendor" "$BUILD_DIR/"
 
 cd "$BUILD_DIR"
 git init

@@ -34,7 +34,6 @@ jobs:
                   cp demo/sample-bibliography.json _pages/
                   cp -r demo/css _pages/
                   cp -r demo/workers _pages/
-                  cp -r demo/vendor _pages/
 
             - name: Deploy to Pages branch
               run: |

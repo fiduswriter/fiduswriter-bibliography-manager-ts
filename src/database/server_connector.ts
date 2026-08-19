@@ -2,13 +2,8 @@ import type {
     BibCategory,
     BibDBEntry,
     BibliographyApi,
-    BiblistResponse,
-    DeleteBibEntriesRequest,
-    DeleteCategoryRequest,
     IdTranslation,
     SaveCategoriesRequest,
-    SaveCategoriesResponse,
-    SaveBibEntriesRequest,
     ServerBibItem
 } from "../types/biblio.js"
 

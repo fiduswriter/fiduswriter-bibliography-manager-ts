@@ -56,6 +56,20 @@ npm run lint         # Lint with ESLint
 npm run format:check # Check formatting with Prettier
 ```
 
+## Demo
+
+A live, standalone demo of the overview table and entry editor is published via
+git-pages at:
+
+<https://fiduswriter.pages.fiduswriter.org/fiduswriter-bibliography-manager-ts/>
+
+To run it locally:
+
+```bash
+npm run build:demo
+npm run demo   # serves demo/ at http://localhost:8081
+```
+
 ## License
 
 AGPL-3.0 — see [LICENSE](LICENSE) for details.

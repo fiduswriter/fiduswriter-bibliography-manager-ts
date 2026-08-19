@@ -8,9 +8,9 @@ import {
     EndNoteParser,
     NBIBParser,
     OdtCitationsParser,
-    RISParser,
-    sniffFormat
+    RISParser
 } from "bibliojson"
+import {detectImportFormat} from "../format.js"
 
 class BibliographyImportWorker {
     fileContents: string
@@ -32,7 +32,7 @@ class BibliographyImportWorker {
     }
 
     init(): void {
-        const detectedFormat = this.format || sniffFormat(this.fileContents)
+        const detectedFormat = this.format || detectImportFormat(this.fileContents)
 
         if (!detectedFormat) {
             this.sendMessage({
@@ -48,6 +48,9 @@ class BibliographyImportWorker {
 
         try {
             switch (detectedFormat) {
+                case "bibliojson":
+                    parseResult = {entries: JSON.parse(this.fileContents)}
+                    break
                 case "biblatex":
                     parser = new BibLatexParser(this.fileContents)
                     parseResult = parser.parse()
@@ -112,6 +115,9 @@ class BibliographyImportWorker {
             this.bibKeys.forEach(bibKey => {
                 const bibEntry = this.tmpDB[bibKey]
                 bibEntry.cats = []
+                if (!bibEntry.fields) {
+                    bibEntry.fields = {}
+                }
                 if (!bibEntry.fields.title) {
                     bibEntry.fields.title = []
                 }
@@ -123,7 +129,7 @@ class BibliographyImportWorker {
                 }
             })
 
-            if (parser.errors) {
+            if (parser && parser.errors) {
                 parser.errors.forEach((error: any) => {
                     this.sendMessage({
                         type: "error",
@@ -136,7 +142,7 @@ class BibliographyImportWorker {
                 })
             }
 
-            if (parser.warnings) {
+            if (parser && parser.warnings) {
                 parser.warnings.forEach((warning: any) => {
                     this.sendMessage({
                         type: "warning",

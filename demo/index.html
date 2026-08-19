@@ -1,61 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>@fiduswriter/bibliography-manager v0.1.8</title>
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f6fa; color: #2c3e50; line-height: 1.6; }
-.container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-header { text-align: center; margin-bottom: 40px; }
-header img { width: 100px; height: 100px; margin-bottom: 16px; }
-h1 { font-size: 28px; margin-bottom: 8px; }
-h2 { font-size: 20px; margin: 32px 0 16px; color: #1a1a2e; }
-.tagline { color: #666; font-size: 16px; margin-bottom: 24px; }
-.table-wrap { overflow-x: auto; }
-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid #eee; }
-th { background: #fafbfc; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; color: #667; }
-td:first-child { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 14px; color: #1a1a2e; }
-td:last-child { font-size: 14px; color: #444; }
-code { background: #f0f0f5; padding: 2px 6px; border-radius: 3px; font-size: 13px; }
-.links { margin-top: 32px; padding: 16px; background: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); font-size: 14px; }
-.links a { color: #3366cc; text-decoration: none; }
-.links a:hover { text-decoration: underline; }
-footer { margin-top: 40px; text-align: center; font-size: 13px; color: #999; }
-</style>
-</head>
-<body>
-<div class="container">
-<header>
-<img src="logo.svg" alt="@fiduswriter/bibliography-manager">
-<h1>@fiduswriter/bibliography-manager</h1>
-<p class="tagline">Fidus Writer bibliography manager</p>
-</header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@fiduswriter/bibliography-manager demo</title>
 
-<p style="margin-bottom: 16px;">This package is part of the <a href="https://fiduswriter.org">Fidus Writer</a> ecosystem. The API reference below lists every public export with its purpose.</p>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"
+        />
 
-<p style="margin-bottom: 8px;">Install via npm:</p>
-<code style="display: block; padding: 12px; background: #1a1a2e; color: #eee; border-radius: 6px; margin-bottom: 32px; font-size: 14px;">npm install @fiduswriter/bibliography-manager</code>
+        <link rel="stylesheet" href="./css/fwtoolkit.css" />
 
-<h2>API Reference</h2>
-<div class="table-wrap">
-<table><thead><tr><th>Export</th><th>Purpose</th></tr></thead><tbody>
-<tr><td>`BibliographyOverview`</td><td>Full overview table component showing all bibliography entries</td></tr>
-<tr><td>`BibEntryForm`</td><td>Entry form with per-field-type editors (names, dates, ranges, URIs, literals, etc.)</td></tr>
-<tr><td>`BibliographyDB`</td><td>Client-side connector to the server's bibliography database</td></tr>
-<tr><td>`importBibFile`</td><td>Import bibliography data from external files (BibTeX, CSL JSON, etc.)</td></tr>
-<tr><td>`exportBibFile`</td><td>Export bibliography data to external formats</td></tr>
-</tbody></table></div>
+        <!-- Fidus Writer SPA-wide styles (vendored from @fiduswriter/frontend) -->
+        <link rel="stylesheet" href="./vendor/frontend/colors.css" />
+        <link rel="stylesheet" href="./vendor/frontend/forms.css" />
+        <link rel="stylesheet" href="./vendor/frontend/text.css" />
 
-<div class="links">
-<strong>Resources:</strong>
-<a href="https://codeberg.org/fiduswriter/bibliography-manager">Source Repository</a> ·
-<a href="https://www.npmjs.com/package/@fiduswriter/bibliography-manager">npm Package</a>
-</div>
+        <!-- Bibliography-manager additive overrides + component CSS -->
+        <link rel="stylesheet" href="./css/colors.css" />
+        <link rel="stylesheet" href="./css/forms.css" />
+        <link rel="stylesheet" href="./css/bibliography.css" />
 
-<footer>@fiduswriter/bibliography-manager v0.1.8 · AGPL-3.0 · <a href="https://fiduswriter.org">Fidus Writer</a></footer>
-</div>
-</body>
+        <link rel="stylesheet" href="./demo.css" />
+
+        <link rel="icon" type="image/svg+xml" href="./logo.svg" />
+    </head>
+    <body>
+        <header class="demo-header">
+            <img
+                src="./logo.svg"
+                alt="@fiduswriter/bibliography-manager"
+                width="48"
+                height="48"
+            />
+            <div>
+                <h1>Bibliography manager</h1>
+                <p>
+                    A demo of the <code>@fiduswriter/bibliography-manager</code>
+                    overview table and entry editor.
+                </p>
+            </div>
+            <div class="demo-actions">
+                <button
+                    id="demo-add-entry"
+                    type="button"
+                    class="fw-button fw-dark"
+                >
+                    <i class="fa fa-plus"></i> Add entry
+                </button>
+                <button
+                    id="demo-export"
+                    type="button"
+                    class="fw-button fw-light"
+                >
+                    <i class="fa fa-download"></i> Export bibliography
+                </button>
+            </div>
+        </header>
+
+        <ul id="fw-overview-menu"></ul>
+
+        <main class="demo-main">
+            <div id="bibliography"></div>
+        </main>
+
+        <footer class="demo-footer">
+            Click an entry to edit it. Use the delete icon to remove an entry,
+            or the menu above to register, import, and export bibliography
+            sources.
+        </footer>
+
+        <script>
+            // The bibliography manager relies on a few globals that the Fidus
+            // Writer host page normally provides. Define minimal no-op versions
+            // so the demo can run standalone.
+            window.gettext = msgid => msgid
+            window.staticUrl = path => path
+            window.interpolate = fmt => fmt
+            window.settings = {}
+        </script>
+        <script type="module" src="./bundle.js"></script>
+    </body>
 </html>

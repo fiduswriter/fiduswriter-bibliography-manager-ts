@@ -1,4 +1,4 @@
-import {BibLatexFileExporter} from "../export/index.js"
+import {exportBibFileDialog} from "../export/index.js"
 import {BibliographyFileImportDialog} from "../import/index.js"
 import type {IdTranslation} from "../types/biblio.js"
 import type {BibliographyOverview} from "./index.js"
@@ -23,13 +23,11 @@ export const bulkMenuModel = () => ({
             title: gettext("Export selected"),
             tooltip: gettext("Export selected bibliography entries."),
             action: (overview: BibliographyOverview) => {
-                const ids = overview.getSelected()
+                const ids = overview
+                    .getSelected()
+                    .map(id => Number.parseInt(String(id)))
                 if (ids.length) {
-                    const exporter = new BibLatexFileExporter(
-                        overview.app.bibDB,
-                        ids
-                    )
-                    exporter.init()
+                    exportBibFileDialog(overview.app.bibDB, ids)
                 }
             },
             disabled: (overview: BibliographyOverview) =>
@@ -100,13 +98,25 @@ export const menuModel = () => ({
             order: 4
         },
         {
+            type: "text",
+            title: gettext("Export bibliography"),
+            keys: "Alt-x",
+            action: (overview: BibliographyOverview) => {
+                const ids = Object.keys(overview.app.bibDB.db).map(id =>
+                    Number.parseInt(id)
+                )
+                exportBibFileDialog(overview.app.bibDB, ids)
+            },
+            order: 5
+        },
+        {
             type: "search",
             icon: "search",
             title: gettext("Search bibliography"),
             keys: "Alt-s",
             input: (overview: BibliographyOverview, text: string) =>
                 overview.table!.search(text),
-            order: 5
+            order: 6
         }
     ]
 })

@@ -1,0 +1,47 @@
+name: Deploy demo to git-pages
+
+on:
+    push:
+        branches: [main]
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: "22"
+
+            - name: Install dependencies
+              run: npm install
+
+            - name: Build library
+              run: npm run build
+
+            - name: Build demo
+              run: npm run build:demo
+
+            - name: Prepare Pages content
+              run: |
+                  rm -rf _pages
+                  mkdir -p _pages
+                  cp demo/index.html _pages/
+                  cp demo/demo.css _pages/
+                  cp demo/bundle.js _pages/
+                  cp demo/logo.svg _pages/
+                  cp demo/sample-bibliography.json _pages/
+                  cp -r demo/css _pages/
+                  cp -r demo/workers _pages/
+                  cp -r demo/vendor _pages/
+
+            - name: Deploy to Pages branch
+              run: |
+                  cd _pages
+                  git init
+                  git config user.name "CI"
+                  git config user.email "ci@fiduswriter.org"
+                  git add -A
+                  git commit -m "Deploy demo [skip ci]"
+                  git push -f "https://${{ secrets.PAGES_TOKEN }}@git.fiduswriter.org/${{ github.repository }}.git" HEAD:pages

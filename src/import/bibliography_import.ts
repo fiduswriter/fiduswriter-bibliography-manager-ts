@@ -1,6 +1,6 @@
-import {sniffFormat} from "bibliojson"
 import {addAlert} from "fwtoolkit"
 import type {BibDBCollection, BibDBEntry, IdTranslation} from "../types/biblio.js"
+import {detectImportFormat} from "./format.js"
 
 interface ImportMessage {
     type: string
@@ -53,7 +53,7 @@ export class BibliographyImporter {
 
     init(): void {
         // Detect the format of the input file
-        const format = sniffFormat(this.fileContents)
+        const format = detectImportFormat(this.fileContents)
 
         if (!format) {
             if (this.showAlerts) {

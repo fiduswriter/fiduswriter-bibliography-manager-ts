@@ -1,0 +1,64 @@
+/*
+ * Vendored from @fiduswriter/frontend (fiduswriter-frontend-ts) for the
+ * standalone demo. The bibliography manager's CSS assumes these SPA-wide
+ * variables are loaded after fwtoolkit/css/colors.css.
+ *
+ * SPA-wide custom properties — load after fwtoolkit/css/colors.css.
+ * Does NOT duplicate fwtoolkit's base custom properties; only adds
+ * variables used by the Fidus Writer application shell.
+ */
+
+:root {
+    /* -----------------------------------------------------------------
+     * High contrast mode
+     * ----------------------------------------------------------------- */
+    --highcontrast-overlay-color: 255 255 255 / 0.8;
+    --highcontrast-background-color: #ffffff;
+    --highcontrast-border-color: #e0e0e0;
+
+    /* -----------------------------------------------------------------
+     * Navigation (header menu)
+     * ----------------------------------------------------------------- */
+    --nagivation-link-text-color: #dde7e3;
+    --nagivation-link-active-text-color: #ffffff;
+
+    /* -----------------------------------------------------------------
+     * Tables
+     * ----------------------------------------------------------------- */
+    --table-row-background-color: #bfedc1;
+
+    /* -----------------------------------------------------------------
+     * Additional color schemes (not present in fwtoolkit)
+     * ----------------------------------------------------------------- */
+
+    /* light green text */
+    --cs-4-text: #4c6860;
+
+    /* white on light green — extended from fwtoolkit's partial cs-5 */
+    --cs-5-text: #ffffff;
+    --cs-5-border: #f2f2f2;
+    --cs-5-background-hover: #97cdbe;
+
+    /* -----------------------------------------------------------------
+     * Template manager
+     * ----------------------------------------------------------------- */
+    --part-neutral-background-color: #f0f8ff;
+    --part-neutral-border-color: #000000;
+    --part-heading-background-color: #84c4fe;
+    --part-contributors-background-color: #928efe;
+    --part-richtext-background-color: #ffc87b;
+    --part-tags-background-color: #ffdf7b;
+    --part-table-background-color: #bfedc1;
+    --part-toc-background-color: #985f99;
+
+    /* -----------------------------------------------------------------
+     * Feedback tab
+     * ----------------------------------------------------------------- */
+    --feedback-tab-background-color: #4da4f1;
+    --feedback-tab-background-hover-color: #e6d180;
+    --feedback-background-color: #ecdc9e;
+    --feedback-text-color: #d3421c;
+    --feedback-icon-color: #555555;
+    --feedback-icon-hover-color: #999999;
+    --feedback-icon-focus-color: #999999;
+}

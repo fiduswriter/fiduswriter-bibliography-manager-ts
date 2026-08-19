@@ -23,15 +23,6 @@ declare module "fix-utf8" {
     export default fixUTF8
 }
 
-declare module "downloadjs" {
-    function download(
-        data: Blob | string,
-        filename: string,
-        mimeType?: string
-    ): void
-    export default download
-}
-
 declare module "fwtoolkit/file/zip" {
     export interface ZipFileSpec {
         filename: string

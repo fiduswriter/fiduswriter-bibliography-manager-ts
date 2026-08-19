@@ -77,7 +77,8 @@
     "format:check": "prettier --check .",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config jest.config.js",
     "install-hooks": "husky",
-    "demo": "echo \"Open demo/standalone/index.html in a browser or run: npx http-server demo/standalone -p 8081 -c-1\""
+    "build:demo": "node scripts/build-demo.mjs",
+    "demo": "npm run build:demo && npx http-server demo -p 8081 -c-1"
   },
   "dependencies": {
     "bibliojson": "^4.0.4",
@@ -94,7 +95,9 @@
     "@swc/jest": "^0.2.39",
     "@types/jest": "^30.0.0",
     "@typescript/native": "npm:typescript@^7.0.2",
+    "esbuild": "^0.28.2",
     "eslint": "^10.6.0",
+    "events": "^3.3.0",
     "gettext-parser": "^9.1.1",
     "globals": "^15.15.0",
     "happy-dom": "^20.10.6",

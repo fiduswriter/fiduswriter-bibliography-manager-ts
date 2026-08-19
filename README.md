@@ -15,6 +15,20 @@ Fidus Writer collaborative editor. Provides an overview table for browsing
 citations, an entry form with specialized field editors, a client-side
 database connector, and import/export filters for bibliography data.
 
+## Demo
+
+A live, standalone demo of the overview table and entry editor is published via
+git-pages at:
+
+<https://fiduswriter.pages.fiduswriter.org/fiduswriter-bibliography-manager-ts/>
+
+To run it locally:
+
+```bash
+npm run build:demo
+npm run demo   # serves demo/ at http://localhost:8081
+```
+
 ## Exports
 
 | Export | Description |
@@ -54,20 +68,6 @@ npm run build        # Compile TypeScript to dist/
 npm run typecheck    # Check types without emitting
 npm run lint         # Lint with ESLint
 npm run format:check # Check formatting with Prettier
-```
-
-## Demo
-
-A live, standalone demo of the overview table and entry editor is published via
-git-pages at:
-
-<https://fiduswriter.pages.fiduswriter.org/fiduswriter-bibliography-manager-ts/>
-
-To run it locally:
-
-```bash
-npm run build:demo
-npm run demo   # serves demo/ at http://localhost:8081
 ```
 
 ## License

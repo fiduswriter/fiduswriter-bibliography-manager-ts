@@ -18,7 +18,8 @@ initSettings({
     apiUrl: url => url,
     getCsrfToken: () => "",
     gettext: msgid => msgid,
-    staticUrl: path => path
+    staticUrl: path =>
+        (window as unknown as {staticUrl: (p: string) => string}).staticUrl(path)
 })
 
 const mockDB = new MockBibDB()

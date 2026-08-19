@@ -7,7 +7,7 @@
 
         <link
             rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"
+            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"
         />
 
         <link rel="stylesheet" href="./css/fwtoolkit.css" />
@@ -68,12 +68,23 @@
 
         <script>
             // The bibliography manager relies on a few globals that the Fidus
-            // Writer host page normally provides. Define minimal no-op versions
-            // so the demo can run standalone.
+            // Writer host page normally provides. Define minimal stand-ins so
+            // the demo can run standalone.
             window.gettext = msgid => msgid
-            window.staticUrl = path => path
             window.interpolate = fmt => fmt
             window.settings = {}
+            // Map the host's static CSS paths to the demo's local files. All
+            // fwtoolkit CSS (including inline_tools.css) is bundled into the
+            // single fwtoolkit.css loaded above.
+            window.staticUrl = path => {
+                if (path === "css/bibliography/bibliography.css") {
+                    return "./css/bibliography.css"
+                }
+                if (path === "css/prosemirror.css") {
+                    return "./css/prosemirror.css"
+                }
+                return "./css/fwtoolkit.css"
+            }
         </script>
         <script type="module" src="./bundle.js"></script>
     </body>

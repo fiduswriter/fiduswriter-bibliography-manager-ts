@@ -73,6 +73,10 @@ function copyCSS() {
         join(root, "node_modules", "fwtoolkit", "css", "fwtoolkit.css"),
         join(cssDir, "fwtoolkit.css")
     )
+    cpSync(
+        join(root, "node_modules", "prosemirror-view", "style", "prosemirror.css"),
+        join(cssDir, "prosemirror.css")
+    )
     cpSync(join(root, "logo.svg"), join(demoDir, "logo.svg"))
 }
 

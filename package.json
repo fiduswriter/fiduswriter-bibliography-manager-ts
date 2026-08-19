@@ -83,7 +83,7 @@
   "dependencies": {
     "bibliojson": "^4.0.4",
     "fix-utf8": "2.0.1",
-    "fwtoolkit": "^0.2.10",
+    "fwtoolkit": "^0.2.11",
     "prosemirror-commands": "^1.7.0",
     "prosemirror-model": "^1.25.0",
     "simple-datatables": "^10.2.0",
@@ -113,6 +113,7 @@
       "fwtoolkit": [
         "colors.css",
         "forms.css",
+        "text.css",
         "buttons.css",
         "dialog.css",
         "data_table.css",

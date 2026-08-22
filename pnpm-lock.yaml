@@ -15,8 +15,8 @@ importers:
         specifier: 2.0.1
         version: 2.0.1
       fwtoolkit:
-        specifier: ^0.2.13
-        version: 0.2.13(prosemirror-commands@1.7.1)(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.2)
+        specifier: ^0.2.18
+        version: 0.2.18(prosemirror-commands@1.7.1)(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.2)
       prosemirror-commands:
         specifier: ^1.7.0
         version: 1.7.1
@@ -1449,8 +1449,8 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
-  fwtoolkit@0.2.13:
-    resolution: {integrity: sha512-Ek4gZyymmrhTM8pSTv6egXMdL1bedVRcIB5KZ20Z0P9Dyr3zS7MIk2gTehvvb3dkOHW7bguVkqC9WBI2tYik6A==}
+  fwtoolkit@0.2.18:
+    resolution: {integrity: sha512-qyyY8frMlKIEKyNu3NAx34MU3Fkz+E8DHJQfPznSmUfzSHl+cYZTN+dcRj9z4FJ3agExCdGw18ZEhYx9EI9nJw==}
     peerDependencies:
       prosemirror-commands: ^1.7.0
       prosemirror-history: ^1.4.0
@@ -3593,7 +3593,7 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
-  fwtoolkit@0.2.13(prosemirror-commands@1.7.1)(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.2):
+  fwtoolkit@0.2.18(prosemirror-commands@1.7.1)(prosemirror-history@1.5.0)(prosemirror-keymap@1.2.3)(prosemirror-model@1.25.11)(prosemirror-state@1.4.4)(prosemirror-view@1.42.2):
     dependencies:
       diff-dom: 5.2.1
       jszip: 3.10.1

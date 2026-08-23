@@ -88,7 +88,7 @@ export class BibliographyOverview {
         ensureCSS([
             staticUrl("css/bibliography/bibliography.css"),
             staticUrl("css/prosemirror.css"),
-            staticUrl("css/inline_tools.css")
+            staticUrl("css/fwtoolkit/inline_tools.css")
         ])
         setDocTitle(gettext("Bibliography Manager"), this.app)
     }

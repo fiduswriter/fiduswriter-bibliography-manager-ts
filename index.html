@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@fiduswriter/bibliography-manager demo</title>
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"
+        />
+
+        <link rel="stylesheet" href="./css/fwtoolkit.css" />
+
+        <!-- Bibliography-manager additive overrides + component CSS -->
+        <link rel="stylesheet" href="./css/colors.css" />
+        <link rel="stylesheet" href="./css/forms.css" />
+        <link rel="stylesheet" href="./css/bibliography.css" />
+
+        <link rel="stylesheet" href="./demo.css" />
+
+        <link rel="icon" type="image/svg+xml" href="./logo.svg" />
+    </head>
+    <body>
+        <header class="demo-header">
+            <img
+                src="./logo.svg"
+                alt="@fiduswriter/bibliography-manager"
+                width="48"
+                height="48"
+            />
+            <div>
+                <h1>Bibliography manager</h1>
+                <p>
+                    A demo of the <code>@fiduswriter/bibliography-manager</code>
+                    overview table and entry editor.
+                </p>
+            </div>
+            <div class="demo-actions">
+                <button
+                    id="demo-add-entry"
+                    type="button"
+                    class="fw-button fw-dark"
+                >
+                    <i class="fa fa-plus"></i> Add entry
+                </button>
+                <button
+                    id="demo-export"
+                    type="button"
+                    class="fw-button fw-light"
+                >
+                    <i class="fa fa-download"></i> Export bibliography
+                </button>
+            </div>
+        </header>
+
+        <ul id="fw-overview-menu"></ul>
+
+        <main class="demo-main">
+            <div id="bibliography"></div>
+        </main>
+
+        <footer class="demo-footer">
+            Click an entry to edit it. Use the delete icon to remove an entry,
+            or the menu above to register, import, and export bibliography
+            sources.
+        </footer>
+
+        <script>
+            // The bibliography manager relies on a few globals that the Fidus
+            // Writer host page normally provides. Define minimal stand-ins so
+            // the demo can run standalone.
+            window.gettext = msgid => msgid
+            window.interpolate = fmt => fmt
+            window.settings = {}
+            // Map the host's static CSS paths to the demo's local files. All
+            // fwtoolkit CSS (including inline_tools.css) is bundled into the
+            // single fwtoolkit.css loaded above.
+            window.staticUrl = path => {
+                if (path === "css/bibliography/bibliography.css") {
+                    return "./css/bibliography.css"
+                }
+                if (path === "css/prosemirror.css") {
+                    return "./css/prosemirror.css"
+                }
+                return "./css/fwtoolkit.css"
+            }
+        </script>
+        <script type="module" src="./bundle.js"></script>
+    </body>
+</html>

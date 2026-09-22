@@ -1,0 +1,167 @@
+{
+    "1": {
+        "entry_key": "knuth1984literate",
+        "bib_type": "article-journal",
+        "fields": {
+            "title": [{ "type": "text", "text": "Literate Programming" }],
+            "author": [
+                {
+                    "family": [{ "type": "text", "text": "Knuth" }],
+                    "given": [{ "type": "text", "text": "Donald E." }]
+                }
+            ],
+            "journaltitle": [{ "type": "text", "text": "The Computer Journal" }],
+            "date": "1984",
+            "volume": [{ "type": "text", "text": "27" }],
+            "number": [{ "type": "text", "text": "2" }],
+            "pages": [
+                [
+                    [{ "type": "text", "text": "97" }],
+                    [{ "type": "text", "text": "111" }]
+                ]
+            ],
+            "doi": "10.1093/comjnl/27.2.97",
+            "langid": "usenglish"
+        }
+    },
+    "2": {
+        "entry_key": "lamport1994latex",
+        "bib_type": "book",
+        "fields": {
+            "title": [
+                { "type": "text", "text": "LaTeX: A Document Preparation System" }
+            ],
+            "author": [
+                {
+                    "family": [{ "type": "text", "text": "Lamport" }],
+                    "given": [{ "type": "text", "text": "Leslie" }]
+                }
+            ],
+            "date": "1994",
+            "edition": [{ "type": "text", "text": "2" }],
+            "publisher": [
+                [{ "type": "text", "text": "Addison-Wesley" }]
+            ],
+            "location": [
+                [{ "type": "text", "text": "Reading, Massachusetts" }]
+            ],
+            "isbn": [{ "type": "text", "text": "9780201529838" }],
+            "langid": "usenglish"
+        }
+    },
+    "3": {
+        "entry_key": "shannon1948mathematical",
+        "bib_type": "article-journal",
+        "fields": {
+            "title": [
+                {
+                    "type": "text",
+                    "text": "A Mathematical Theory of Communication"
+                }
+            ],
+            "author": [
+                {
+                    "family": [{ "type": "text", "text": "Shannon" }],
+                    "given": [{ "type": "text", "text": "Claude E." }]
+                }
+            ],
+            "journaltitle": [
+                { "type": "text", "text": "The Bell System Technical Journal" }
+            ],
+            "date": "1948",
+            "volume": [{ "type": "text", "text": "27" }],
+            "number": [{ "type": "text", "text": "3" }],
+            "pages": [
+                [
+                    [{ "type": "text", "text": "379" }],
+                    [{ "type": "text", "text": "423" }]
+                ]
+            ],
+            "doi": "10.1002/j.1538-7305.1948.tb01338.x",
+            "langid": "usenglish"
+        }
+    },
+    "4": {
+        "entry_key": "wirth1976algorithms",
+        "bib_type": "book",
+        "fields": {
+            "title": [
+                {
+                    "type": "text",
+                    "text": "Algorithms + Data Structures = Programs"
+                }
+            ],
+            "author": [
+                {
+                    "family": [{ "type": "text", "text": "Wirth" }],
+                    "given": [{ "type": "text", "text": "Niklaus" }]
+                }
+            ],
+            "date": "1976",
+            "publisher": [
+                [{ "type": "text", "text": "Prentice-Hall" }]
+            ],
+            "location": [
+                [{ "type": "text", "text": "Englewood Cliffs, New Jersey" }]
+            ],
+            "isbn": [{ "type": "text", "text": "9780130224187" }],
+            "langid": "usenglish"
+        }
+    },
+    "5": {
+        "entry_key": "dijkstra1968goto",
+        "bib_type": "article-journal",
+        "fields": {
+            "title": [
+                { "type": "text", "text": "Go To Statement Considered Harmful" }
+            ],
+            "author": [
+                {
+                    "family": [{ "type": "text", "text": "Dijkstra" }],
+                    "given": [{ "type": "text", "text": "Edsger W." }]
+                }
+            ],
+            "journaltitle": [
+                { "type": "text", "text": "Communications of the ACM" }
+            ],
+            "date": "1968",
+            "volume": [{ "type": "text", "text": "11" }],
+            "number": [{ "type": "text", "text": "3" }],
+            "pages": [
+                [
+                    [{ "type": "text", "text": "147" }],
+                    [{ "type": "text", "text": "148" }]
+                ]
+            ],
+            "doi": "10.1145/362929.362947",
+            "langid": "usenglish"
+        }
+    },
+    "6": {
+        "entry_key": "turing1950computing",
+        "bib_type": "article-journal",
+        "fields": {
+            "title": [
+                { "type": "text", "text": "Computing Machinery and Intelligence" }
+            ],
+            "author": [
+                {
+                    "family": [{ "type": "text", "text": "Turing" }],
+                    "given": [{ "type": "text", "text": "Alan M." }]
+                }
+            ],
+            "journaltitle": [{ "type": "text", "text": "Mind" }],
+            "date": "1950",
+            "volume": [{ "type": "text", "text": "59" }],
+            "number": [{ "type": "text", "text": "236" }],
+            "pages": [
+                [
+                    [{ "type": "text", "text": "433" }],
+                    [{ "type": "text", "text": "460" }]
+                ]
+            ],
+            "doi": "10.1093/mind/LIX.236.433",
+            "langid": "usenglish"
+        }
+    }
+}

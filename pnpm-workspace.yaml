@@ -1,4 +1,11 @@
-onlyBuiltDependencies:
-  - '@swc/core'
-  - esbuild
-  - unrs-resolver
+allowBuilds:
+  '@swc/core': true
+  core-js: true
+  core-js-pure: true
+  es5-ext: true
+  esbuild: true
+  unrs-resolver: true
+minimumReleaseAgeExclude:
+  - '@fiduswriter/document@0.3.17'
+  - paged-with-floats@0.11.0
+  - pages-to-pdf@0.3.10

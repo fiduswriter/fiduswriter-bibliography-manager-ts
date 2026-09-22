@@ -1,148 +1,149 @@
 {
-  "name": "@fiduswriter/bibliography-manager",
-  "version": "0.1.33",
-  "description": "Fidus Writer bibliography manager",
-  "keywords": [
-    "fiduswriter",
-    "bibliography",
-    "citations",
-    "bibtex",
-    "csl",
-    "reference-manager"
-  ],
-  "homepage": "https://git.fiduswriter.org/fiduswriter/fiduswriter-bibliography-manager-ts",
-  "bugs": {
-    "url": "https://git.fiduswriter.org/fiduswriter/fiduswriter-bibliography-manager-ts/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://git.fiduswriter.org/fiduswriter/fiduswriter-bibliography-manager-ts.git"
-  },
-  "license": "AGPL-3.0",
-  "author": "Johannes Wilm",
-  "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
-    },
-    "./overview": {
-      "types": "./dist/overview/index.d.ts",
-      "default": "./dist/overview/index.js"
-    },
-    "./form": {
-      "types": "./dist/form/index.d.ts",
-      "default": "./dist/form/index.js"
-    },
-    "./database": {
-      "types": "./dist/database/index.d.ts",
-      "default": "./dist/database/index.js"
-    },
-    "./import": {
-      "types": "./dist/import/index.d.ts",
-      "default": "./dist/import/index.js"
-    },
-    "./export": {
-      "types": "./dist/export/index.d.ts",
-      "default": "./dist/export/index.js"
-    },
-    "./bibliojson": {
-      "types": "./dist/bibliojson.d.ts",
-      "default": "./dist/bibliojson.js"
-    },
-    "./*": {
-      "types": "./dist/*.d.ts",
-      "default": "./dist/*.js"
-    }
-  },
-  "files": [
-    "css/",
-    "dist/",
-    "src/",
-    "locale/*/messages.json",
-    "LICENSE",
-    "README.md",
-    "logo.svg"
-  ],
-  "scripts": {
-    "build": "tsc",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm run build",
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint src",
-    "lint:fix": "eslint src --fix",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config jest.config.js",
-    "install-hooks": "husky",
-    "build:demo": "node scripts/build-demo.mjs",
-    "demo": "npm run build:demo && npx http-server demo -p 8081 -c-1"
-  },
-  "dependencies": {
-    "bibliojson": "^4.0.4",
-    "fix-utf8": "2.0.1",
-    "fwtoolkit": "^0.2.19",
-    "prosemirror-commands": "^1.7.0",
-    "prosemirror-model": "^1.25.0",
-    "simple-datatables": "^10.2.0",
-    "tokenfield": "^1.2.2"
-  },
-  "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@swc/core": "^1.16.1",
-    "@swc/jest": "^0.2.39",
-    "@types/jest": "^30.0.0",
-    "@typescript/native": "npm:typescript@^7.0.2",
-    "esbuild": "^0.28.2",
-    "eslint": "^10.6.0",
-    "events": "^3.3.0",
-    "gettext-parser": "^9.1.1",
-    "globals": "^15.15.0",
-    "happy-dom": "^20.10.6",
-    "husky": "^9.1.7",
-    "jest": "^30.4.2",
-    "lint-staged": "^17.0.8",
-    "prettier": "^3.5.3",
-    "prosemirror-view": "^1.42.2",
-    "typescript": "npm:@typescript/typescript6@^6.0.2",
-    "typescript-eslint": "^8.67.0"
-  },
-  "fiduswriter": {
-    "css": {
-      "fwtoolkit": [
-        "colors.css",
-        "forms.css",
-        "text.css",
-        "buttons.css",
-        "dialog.css",
-        "data_table.css",
-        "dialog_table.css",
-        "common.css",
-        "pulldown.css",
-        "ui_tabs.css",
-        "content_menu.css",
-        "loader.css"
-      ],
-      "own": {
-        "additive": [
-          "colors.css",
-          "forms.css"
-        ],
-        "component": [
-          "bibliography.css"
-        ]
-      }
-    }
-  },
-  "lint-staged": {
-    "*.{ts,js,mjs,css,md,json,html}": [
-      "prettier --write"
+    "name": "@fiduswriter/bibliography-manager",
+    "version": "0.1.33",
+    "description": "Fidus Writer bibliography manager",
+    "keywords": [
+        "fiduswriter",
+        "bibliography",
+        "citations",
+        "bibtex",
+        "csl",
+        "reference-manager"
     ],
-    "*.{ts,js,mjs}": [
-      "eslint --fix",
-      "sh -c 'npm run typecheck'"
-    ]
-  }
+    "homepage": "https://git.fiduswriter.org/fiduswriter/fiduswriter-bibliography-manager-ts",
+    "bugs": {
+        "url": "https://git.fiduswriter.org/fiduswriter/fiduswriter-bibliography-manager-ts/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://git.fiduswriter.org/fiduswriter/fiduswriter-bibliography-manager-ts.git"
+    },
+    "license": "AGPL-3.0",
+    "author": "Johannes Wilm",
+    "type": "module",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+        },
+        "./overview": {
+            "types": "./dist/overview/index.d.ts",
+            "default": "./dist/overview/index.js"
+        },
+        "./form": {
+            "types": "./dist/form/index.d.ts",
+            "default": "./dist/form/index.js"
+        },
+        "./database": {
+            "types": "./dist/database/index.d.ts",
+            "default": "./dist/database/index.js"
+        },
+        "./import": {
+            "types": "./dist/import/index.d.ts",
+            "default": "./dist/import/index.js"
+        },
+        "./export": {
+            "types": "./dist/export/index.d.ts",
+            "default": "./dist/export/index.js"
+        },
+        "./bibliojson": {
+            "types": "./dist/bibliojson.d.ts",
+            "default": "./dist/bibliojson.js"
+        },
+        "./*": {
+            "types": "./dist/*.d.ts",
+            "default": "./dist/*.js"
+        }
+    },
+    "files": [
+        "css/",
+        "dist/",
+        "src/",
+        "locale/*/messages.json",
+        "LICENSE",
+        "README.md",
+        "logo.svg"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "prepare": "npm run build",
+        "prepublishOnly": "npm run build",
+        "typecheck": "tsc --noEmit",
+        "lint": "eslint src",
+        "lint:fix": "eslint src --fix",
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
+        "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config jest.config.js",
+        "install-hooks": "husky",
+        "build:demo": "node scripts/build-demo.mjs",
+        "demo": "npm run build:demo && npx http-server demo -p 8081 -c-1"
+    },
+    "dependencies": {
+        "bibliojson": "^4.0.4",
+        "fix-utf8": "2.0.1",
+        "fwtoolkit": "^0.2.26",
+        "prosemirror-commands": "^1.7.0",
+        "prosemirror-model": "^1.25.0",
+        "simple-datatables": "^10.2.0",
+        "tokenfield": "^1.2.2",
+        "@fiduswriter/document": "^0.3.17"
+    },
+    "devDependencies": {
+        "@eslint/js": "^10.0.1",
+        "@swc/core": "^1.16.1",
+        "@swc/jest": "^0.2.39",
+        "@types/jest": "^30.0.0",
+        "@typescript/native": "npm:typescript@^7.0.2",
+        "esbuild": "^0.28.2",
+        "eslint": "^10.6.0",
+        "events": "^3.3.0",
+        "gettext-parser": "^9.1.1",
+        "globals": "^15.15.0",
+        "happy-dom": "^20.10.6",
+        "husky": "^9.1.7",
+        "jest": "^30.4.2",
+        "lint-staged": "^17.0.8",
+        "prettier": "^3.5.3",
+        "prosemirror-view": "^1.42.2",
+        "typescript": "npm:@typescript/typescript6@^6.0.2",
+        "typescript-eslint": "^8.67.0"
+    },
+    "fiduswriter": {
+        "css": {
+            "fwtoolkit": [
+                "colors.css",
+                "forms.css",
+                "text.css",
+                "buttons.css",
+                "dialog.css",
+                "data_table.css",
+                "dialog_table.css",
+                "common.css",
+                "pulldown.css",
+                "ui_tabs.css",
+                "content_menu.css",
+                "loader.css"
+            ],
+            "own": {
+                "additive": [
+                    "colors.css",
+                    "forms.css"
+                ],
+                "component": [
+                    "bibliography.css"
+                ]
+            }
+        }
+    },
+    "lint-staged": {
+        "*.{ts,js,mjs,css,md,json,html}": [
+            "prettier --write"
+        ],
+        "*.{ts,js,mjs}": [
+            "eslint --fix",
+            "sh -c 'npm run typecheck'"
+        ]
+    }
 }

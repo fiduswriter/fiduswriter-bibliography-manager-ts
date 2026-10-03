@@ -192,6 +192,19 @@ export interface BibliographyApi {
     deleteBibEntries(ids: number[]): Promise<Response>
 }
 
+/**
+ * Host-provided file picker for bibliography import.
+ *
+ * Mirrors `ImagePicker` from `@fiduswriter/image-manager`: hosts that cannot
+ * use a browser `<input type="file">` (the desktop app opens a native OS
+ * dialog) supply this instead, and it resolves with the picked `File`, or with
+ * `null`/`undefined` when the user cancelled.
+ */
+export type FilePicker = (options?: {
+    /** Accepted extensions, without a leading dot, e.g. `["bib", "json"]`. */
+    extensions?: string[]
+}) => Promise<File | null | undefined>
+
 /** Subset of the main Fidus Writer app object used by bibliography code. */
 export interface BibliographyApp {
     bibDB: BibDBCollection
@@ -203,6 +216,8 @@ export interface BibliographyApp {
     apiConnectors: {
         bibliography: BibliographyApi
     }
+    /** Optional host-provided file picker (see {@link FilePicker}). */
+    filePicker?: FilePicker
 }
 
 // Maintain the legacy `BibDB` alias for bibliojson's type as well, but export

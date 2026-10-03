@@ -41,17 +41,24 @@ function exportFormatInfo(format: BibExportFormat): BibExportFormatInfo {
     )
 }
 
-/** Trigger a browser download for the given text content. */
-function triggerDownload(contents: string, filename: string, mimeType: string): void {
-    const blob = new Blob([contents], {type: mimeType})
-    const url = URL.createObjectURL(blob)
-    const link = document.createElement("a")
-    link.href = url
-    link.download = filename
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-    setTimeout(() => URL.revokeObjectURL(url), 0)
+/** Save the given text content.
+ *
+ * Routes through `@fiduswriter/document`'s `saveFile()`, which prefers
+ * `window.showSaveFilePicker` when a host provides it. That is what lets the
+ * desktop app put a native Save dialog here instead of triggering a browser
+ * download. Hosts without a picker fall back to a normal download.
+ */
+async function saveContents(
+    contents: string,
+    filename: string,
+    mimeType: string
+): Promise<void> {
+    const {saveFile} = await import("@fiduswriter/document/exporter/save")
+    await saveFile(new Blob([contents], {type: mimeType}), filename, {
+        description: "Bibliography",
+        mimeType,
+        extensions: [filename.slice(filename.lastIndexOf("."))]
+    })
 }
 
 /** Convert the client-side db (keyed by server id) to the string-keyed db the
@@ -112,16 +119,27 @@ export function serializeBibDB(
     }
 }
 
-/** Export the selected bibliography entries to the given format and trigger a
- * browser download. */
+/** Export the selected bibliography entries to the given format and save them.
+ *
+ * Returns a promise that resolves once the file has been handed to the host's
+ * save mechanism, so callers can await a native dialog.
+ *
+ * The promise never rejects: every in-tree caller invokes this as a statement
+ * (the dialog button handler and the legacy `BibLatexFileExporter`), so a
+ * rejection would surface as an unhandled rejection with no way for the host to
+ * react. Failures are logged instead. Callers that want to react can inspect
+ * the boolean `saveContents` yields through the File System Access API shim.
+ */
 export function exportBibFile(
     bibDB: BibDBCollection,
     pks: number[],
     format: BibExportFormat = "biblatex"
-): void {
+): Promise<void> {
     const info = exportFormatInfo(format)
     const contents = serializeBibDB(bibDB.db, pks, format)
-    triggerDownload(contents, info.filename, info.mimeType)
+    return saveContents(contents, info.filename, info.mimeType).catch((error) => {
+        console.error(`Could not export the bibliography to ${info.filename}:`, error)
+    })
 }
 
 /** Open a dialog letting the user choose an export format for the selected

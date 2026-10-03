@@ -81,7 +81,7 @@
         "demo": "npm run build:demo && npx http-server demo -p 8081 -c-1"
     },
     "dependencies": {
-        "@fiduswriter/document": "^0.3.17",
+        "@fiduswriter/document": "^0.3.19",
         "bibliojson": "^4.0.4",
         "fix-utf8": "2.0.1",
         "fwtoolkit": "^0.2.26",

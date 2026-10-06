@@ -81,34 +81,34 @@
         "demo": "npm run build:demo && npx http-server demo -p 8081 -c-1"
     },
     "dependencies": {
-        "@fiduswriter/document": "^0.3.19",
-        "bibliojson": "^4.0.4",
+        "@fiduswriter/document": "^0.3.28",
+        "bibliojson": "^4.1.0",
         "fix-utf8": "2.0.1",
         "fwtoolkit": "^0.2.26",
-        "prosemirror-commands": "^1.7.0",
-        "prosemirror-model": "^1.25.0",
-        "simple-datatables": "^10.2.0",
-        "tokenfield": "^1.2.2"
+        "prosemirror-commands": "^1.7.2",
+        "prosemirror-model": "^1.25.12",
+        "simple-datatables": "^10.3.0",
+        "tokenfield": "^1.5.2"
     },
     "devDependencies": {
         "@eslint/js": "^10.0.1",
-        "@swc/core": "^1.16.1",
+        "@swc/core": "^1.16.13",
         "@swc/jest": "^0.2.39",
         "@types/jest": "^30.0.0",
         "@typescript/native": "npm:typescript@^7.0.2",
         "esbuild": "^0.28.2",
-        "eslint": "^10.6.0",
+        "eslint": "^10.12.0",
         "events": "^3.3.0",
         "gettext-parser": "^9.1.1",
         "globals": "^15.15.0",
-        "happy-dom": "^20.10.6",
+        "happy-dom": "^20.14.5",
         "husky": "^9.1.7",
         "jest": "^30.5.2",
-        "lint-staged": "^17.0.8",
-        "prettier": "^3.5.3",
-        "prosemirror-view": "^1.42.2",
+        "lint-staged": "^17.6.0",
+        "prettier": "^3.9.9",
+        "prosemirror-view": "^1.42.6",
         "typescript": "npm:@typescript/typescript6@^6.0.2",
-        "typescript-eslint": "^8.67.0"
+        "typescript-eslint": "^8.71.0"
     },
     "fiduswriter": {
         "css": {

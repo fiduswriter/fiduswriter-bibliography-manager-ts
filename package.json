@@ -81,10 +81,10 @@
         "demo": "npm run build:demo && npx http-server demo -p 8081 -c-1"
     },
     "dependencies": {
-        "@fiduswriter/document": "^0.3.28",
+        "@fiduswriter/document": "^0.3.39",
         "bibliojson": "^4.1.0",
         "fix-utf8": "2.0.1",
-        "fwtoolkit": "^0.2.26",
+        "fwtoolkit": "^0.2.31",
         "prosemirror-commands": "^1.7.2",
         "prosemirror-model": "^1.25.12",
         "simple-datatables": "^10.3.0",

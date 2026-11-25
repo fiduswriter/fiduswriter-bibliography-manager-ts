@@ -1,0 +1,102 @@
+/*
+ * Bibliography-manager-specific form overrides — load after
+ * fwtoolkit/css/forms.css.
+ */
+
+/* -----------------------------------------------------------------
+ * Upload image input
+ * ----------------------------------------------------------------- */
+#uploadimage input.entry-form,
+#uploadimage input.fw-input {
+    width: 486px;
+}
+
+/* -----------------------------------------------------------------
+ * Bibliography entry field error state
+ * ----------------------------------------------------------------- */
+.fw-entry-field.fw-fomt-error input[type="text"],
+.fw-entry-field.fw-fomt-error input[type="number"] {
+    background-color: var(--input-error-background-color);
+}
+
+.fw-entry-field input[type="checkbox"] {
+    margin-top: 12px;
+}
+
+.fw-entry-field .selection-list {
+    position: relative;
+}
+
+.fw-entry-field .fw-type-switch-input-inner select {
+    width: 100%;
+}
+
+.fw-entry-field .fw-select-arrow {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    pointer-events: none;
+}
+
+/* -----------------------------------------------------------------
+ * Tokenfield — bibliography category / keyword input
+ * ----------------------------------------------------------------- */
+.tokenfield {
+    width: 686px;
+    position: relative;
+    max-width: 80vw;
+}
+
+.tokenfield::before,
+.tokenfield::after {
+    content: " ";
+    display: table;
+}
+
+.tokenfield::after {
+    clear: both;
+}
+
+.tokenfield.tokenfield-mode-tokens {
+    display: block;
+    position: relative;
+    font-size: 14px;
+    line-height: 1.4286;
+    color: var(--tokenfield-color);
+    background-color: var(--cs-light-background-hover);
+}
+
+.tokenfield-set {
+    position: relative;
+    padding: 0 10px;
+}
+
+.tokenfield .tokenfield-set > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.tokenfield .tokenfield-set > ul > li {
+    display: inline-block;
+    margin: 8px 5px 0 0;
+    padding: 0 5px;
+    border-radius: 3px;
+    line-height: 1.5;
+    cursor: pointer;
+    color: var(--cs-6-text);
+    background: var(--cs-6-background);
+    border: 1px solid var(--cs-6-border);
+}
+
+.tokenfield .tokenfield-set > ul > li:last-child {
+    margin-bottom: 8px;
+}
+
+.tokenfield .tokenfield-set > ul > li a {
+    color: var(--cs-6-text);
+}
+
+.tokenfield .tokenfield-input {
+    outline: none;
+}

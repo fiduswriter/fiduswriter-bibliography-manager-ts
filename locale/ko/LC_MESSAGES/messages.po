@@ -23,8 +23,14 @@ msgstr "그리고 다른 사람들"
 msgid "Author"
 msgstr "저자"
 
+msgid "BibLaTeX"
+msgstr "BibLaTeX"
+
 msgid "Bibliography Manager"
 msgstr "참고문헌 관리자"
+
+msgid "BiblioJSON"
+msgstr "BiblioJSON"
 
 msgid "CasE ProTecT"
 msgstr "케이스 보호"
@@ -40,6 +46,12 @@ msgstr "삭제 확인"
 
 msgid "Could not obtain bibliography data"
 msgstr "참고문헌 데이터를 가져올 수 없습니다."
+
+msgid "Could not read the bibliography file."
+msgstr "참고문헌 파일을 읽을 수 없습니다."
+
+msgid "CSL JSON"
+msgstr "CSL JSON"
 
 msgid "Custom"
 msgstr "관습"
@@ -70,6 +82,12 @@ msgstr "기울임"
 
 msgid "Error in form, check highlighted values!"
 msgstr "양식에 오류가 있습니다. 강조표시된 값을 확인하세요!"
+
+msgid "Export"
+msgstr "내보내기"
+
+msgid "Export bibliography"
+msgstr "참고문헌 내보내기"
 
 msgid "Export selected"
 msgstr "선택한 내보내기"

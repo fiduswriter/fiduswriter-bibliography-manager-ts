@@ -23,8 +23,14 @@ msgstr "和其他人"
 msgid "Author"
 msgstr "作者"
 
+msgid "BibLaTeX"
+msgstr "圣经乳胶"
+
 msgid "Bibliography Manager"
 msgstr "参考文献管理器"
+
+msgid "BiblioJSON"
+msgstr "书目JSON"
 
 msgid "CasE ProTecT"
 msgstr "大小写保护"
@@ -40,6 +46,12 @@ msgstr "确认删除"
 
 msgid "Could not obtain bibliography data"
 msgstr "无法获取参考书目数据"
+
+msgid "Could not read the bibliography file."
+msgstr "无法读取参考书目文件。"
+
+msgid "CSL JSON"
+msgstr "CSL JSON"
 
 msgid "Custom"
 msgstr "自定义"
@@ -70,6 +82,12 @@ msgstr "强调"
 
 msgid "Error in form, check highlighted values!"
 msgstr "表格错误，请检查突出显示的值！"
+
+msgid "Export"
+msgstr "导出"
+
+msgid "Export bibliography"
+msgstr "导出参考书目"
 
 msgid "Export selected"
 msgstr "导出选定的"

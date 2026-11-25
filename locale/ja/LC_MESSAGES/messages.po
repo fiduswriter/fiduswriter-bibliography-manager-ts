@@ -23,8 +23,14 @@ msgstr "その他"
 msgid "Author"
 msgstr "著者"
 
+msgid "BibLaTeX"
+msgstr "ビブラテックス"
+
 msgid "Bibliography Manager"
 msgstr "参考文献マネージャー"
+
+msgid "BiblioJSON"
+msgstr "BiblioJSON"
 
 msgid "CasE ProTecT"
 msgstr "ケースプロテクト"
@@ -40,6 +46,12 @@ msgstr "削除の確認"
 
 msgid "Could not obtain bibliography data"
 msgstr "書誌データを取得できませんでした"
+
+msgid "Could not read the bibliography file."
+msgstr "参考文献ファイルを読み取れませんでした。"
+
+msgid "CSL JSON"
+msgstr "CSL JSON"
 
 msgid "Custom"
 msgstr "カスタム"
@@ -70,6 +82,12 @@ msgstr "強調"
 
 msgid "Error in form, check highlighted values!"
 msgstr "フォームにエラーがあります。強調表示された値を確認してください。"
+
+msgid "Export"
+msgstr "エクスポート"
+
+msgid "Export bibliography"
+msgstr "参考文献のエクスポート"
 
 msgid "Export selected"
 msgstr "選択したエクスポート"

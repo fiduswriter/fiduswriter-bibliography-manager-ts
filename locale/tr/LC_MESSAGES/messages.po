@@ -23,8 +23,14 @@ msgstr "ve diğerleri"
 msgid "Author"
 msgstr "Yazar"
 
+msgid "BibLaTeX"
+msgstr "BibLaTeX"
+
 msgid "Bibliography Manager"
 msgstr "Kaynakça Yöneticisi"
+
+msgid "BiblioJSON"
+msgstr "BiblioJSON"
 
 msgid "CasE ProTecT"
 msgstr "CASE KORUMA"
@@ -40,6 +46,12 @@ msgstr "Silmeyi onayla"
 
 msgid "Could not obtain bibliography data"
 msgstr "Bibliyografya verileri elde edilemedi"
+
+msgid "Could not read the bibliography file."
+msgstr "Kaynakça dosyası okunamadı."
+
+msgid "CSL JSON"
+msgstr "CSL JSON"
 
 msgid "Custom"
 msgstr "Gelenek"
@@ -70,6 +82,12 @@ msgstr "Vurgu"
 
 msgid "Error in form, check highlighted values!"
 msgstr "Formda hata var, vurgulanan değerleri kontrol edin!"
+
+msgid "Export"
+msgstr "Dışa Aktar"
+
+msgid "Export bibliography"
+msgstr "Bibliyografyayı dışa aktar"
 
 msgid "Export selected"
 msgstr "Seçileni dışa aktar"

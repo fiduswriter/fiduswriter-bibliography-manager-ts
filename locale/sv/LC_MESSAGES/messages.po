@@ -23,8 +23,14 @@ msgstr "med flera"
 msgid "Author"
 msgstr "Författare"
 
+msgid "BibLaTeX"
+msgstr "BibLaTeX"
+
 msgid "Bibliography Manager"
 msgstr "Bibliografiansvarig"
+
+msgid "BiblioJSON"
+msgstr "BiblioJSON"
 
 msgid "CasE ProTecT"
 msgstr "CasE ProTecT"
@@ -40,6 +46,12 @@ msgstr "Bekräfta borttagning"
 
 msgid "Could not obtain bibliography data"
 msgstr "Det gick inte att hämta bibliografidata"
+
+msgid "Could not read the bibliography file."
+msgstr "Kunde inte läsa bibliografifilen."
+
+msgid "CSL JSON"
+msgstr "CSL JSON"
 
 msgid "Custom"
 msgstr "Anpassad"
@@ -70,6 +82,12 @@ msgstr "Betoning"
 
 msgid "Error in form, check highlighted values!"
 msgstr "Fel i formuläret, kontrollera markerade värden!"
+
+msgid "Export"
+msgstr "Exportera"
+
+msgid "Export bibliography"
+msgstr "Exportera bibliografi"
 
 msgid "Export selected"
 msgstr "Exportera valt"

@@ -23,8 +23,14 @@ msgstr "og andre"
 msgid "Author"
 msgstr "Forfatter"
 
+msgid "BibLaTeX"
+msgstr "BibLaTeX"
+
 msgid "Bibliography Manager"
 msgstr "Bibliografihåndtering"
+
+msgid "BiblioJSON"
+msgstr "BiblioJSON"
 
 msgid "CasE ProTecT"
 msgstr "Bevar store/små bokstaver"
@@ -40,6 +46,12 @@ msgstr "Bekreft sletting"
 
 msgid "Could not obtain bibliography data"
 msgstr "Kunne ikke hente bibliografidata"
+
+msgid "Could not read the bibliography file."
+msgstr "Kunne ikke lese bibliografifilen."
+
+msgid "CSL JSON"
+msgstr "CSL JSON"
 
 msgid "Custom"
 msgstr "Egendefinert"
@@ -70,6 +82,12 @@ msgstr "Vektlegging"
 
 msgid "Error in form, check highlighted values!"
 msgstr "Skjemafeil, sjekk uthevede verdier!"
+
+msgid "Export"
+msgstr "Eksporter"
+
+msgid "Export bibliography"
+msgstr "Eksporter bibliografi"
 
 msgid "Export selected"
 msgstr "Eksporter valgt"

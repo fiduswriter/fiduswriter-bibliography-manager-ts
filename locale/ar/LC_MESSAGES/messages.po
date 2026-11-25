@@ -23,8 +23,14 @@ msgstr "وغيرها"
 msgid "Author"
 msgstr "مؤلف"
 
+msgid "BibLaTeX"
+msgstr "BibLaTeX"
+
 msgid "Bibliography Manager"
 msgstr "مدير الببليوغرافيا"
+
+msgid "BiblioJSON"
+msgstr "BiblioJSON"
 
 msgid "CasE ProTecT"
 msgstr "كيس بروتيكت"
@@ -40,6 +46,12 @@ msgstr "تأكيد الحذف"
 
 msgid "Could not obtain bibliography data"
 msgstr "لا يمكن الحصول على البيانات الببليوغرافية"
+
+msgid "Could not read the bibliography file."
+msgstr "لا يمكن قراءة ملف المراجع."
+
+msgid "CSL JSON"
+msgstr "CSL جسون"
 
 msgid "Custom"
 msgstr "مخصص"
@@ -70,6 +82,12 @@ msgstr "توكيد"
 
 msgid "Error in form, check highlighted values!"
 msgstr "خطأ في النموذج، تحقق من القيم المميزة!"
+
+msgid "Export"
+msgstr "تصدير"
+
+msgid "Export bibliography"
+msgstr "تصدير الببليوغرافيا"
 
 msgid "Export selected"
 msgstr "تم تحديد التصدير"

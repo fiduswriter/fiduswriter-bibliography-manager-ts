@@ -23,8 +23,14 @@ msgstr "a další"
 msgid "Author"
 msgstr "Autor"
 
+msgid "BibLaTeX"
+msgstr "BibLaTeX"
+
 msgid "Bibliography Manager"
 msgstr "Správce bibliografie"
+
+msgid "BiblioJSON"
+msgstr "BiblioJSON"
 
 msgid "CasE ProTecT"
 msgstr "CasE PROTecT"
@@ -40,6 +46,12 @@ msgstr "Potvrďte smazání"
 
 msgid "Could not obtain bibliography data"
 msgstr "Nepodařilo se získat bibliografická data"
+
+msgid "Could not read the bibliography file."
+msgstr "Soubor bibliografie nelze přečíst."
+
+msgid "CSL JSON"
+msgstr "CSL JSON"
 
 msgid "Custom"
 msgstr "Zvyk"
@@ -70,6 +82,12 @@ msgstr "Důraz"
 
 msgid "Error in form, check highlighted values!"
 msgstr "Chyba ve formuláři, zkontrolujte zvýrazněné hodnoty!"
+
+msgid "Export"
+msgstr "Vývozní"
+
+msgid "Export bibliography"
+msgstr "Exportujte bibliografii"
 
 msgid "Export selected"
 msgstr "Export vybrán"

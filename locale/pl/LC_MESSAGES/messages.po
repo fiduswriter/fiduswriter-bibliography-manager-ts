@@ -23,8 +23,14 @@ msgstr "i inne"
 msgid "Author"
 msgstr "Autor"
 
+msgid "BibLaTeX"
+msgstr "BibLaTeX"
+
 msgid "Bibliography Manager"
 msgstr "Menedżer Bibliografii"
+
+msgid "BiblioJSON"
+msgstr "BiblioJSON"
 
 msgid "CasE ProTecT"
 msgstr "Case ProTecT"
@@ -40,6 +46,12 @@ msgstr "Potwierdź usunięcie"
 
 msgid "Could not obtain bibliography data"
 msgstr "Nie można uzyskać danych bibliograficznych"
+
+msgid "Could not read the bibliography file."
+msgstr "Nie można odczytać pliku bibliografii."
+
+msgid "CSL JSON"
+msgstr "JSON CSL"
 
 msgid "Custom"
 msgstr "Własny"
@@ -70,6 +82,12 @@ msgstr "Wyróżnienie"
 
 msgid "Error in form, check highlighted values!"
 msgstr "Błąd w formularzu, sprawdź wyróżnione wartości!"
+
+msgid "Export"
+msgstr "Eksportuj"
+
+msgid "Export bibliography"
+msgstr "Eksportuj bibliografię"
 
 msgid "Export selected"
 msgstr "Wyeksportuj wybrane"

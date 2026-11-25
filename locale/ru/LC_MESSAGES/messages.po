@@ -23,8 +23,14 @@ msgstr "и другие"
 msgid "Author"
 msgstr "Автор"
 
+msgid "BibLaTeX"
+msgstr "БибЛаТекс"
+
 msgid "Bibliography Manager"
 msgstr "Менеджер по библиографии"
+
+msgid "BiblioJSON"
+msgstr "БиблиоJSON"
 
 msgid "CasE ProTecT"
 msgstr "ЗАЩИТА КОРПУСА"
@@ -40,6 +46,12 @@ msgstr "Подтвердить удаление"
 
 msgid "Could not obtain bibliography data"
 msgstr "Не удалось получить данные библиографии."
+
+msgid "Could not read the bibliography file."
+msgstr "Не удалось прочитать файл библиографии."
+
+msgid "CSL JSON"
+msgstr "КСЛ JSON"
 
 msgid "Custom"
 msgstr "Свой"
@@ -70,6 +82,12 @@ msgstr "Курсив"
 
 msgid "Error in form, check highlighted values!"
 msgstr "Ошибка в форме, проверьте выделенные значения!"
+
+msgid "Export"
+msgstr "Экспорт"
+
+msgid "Export bibliography"
+msgstr "Экспортная библиография"
 
 msgid "Export selected"
 msgstr "Экспортировать выбранное"

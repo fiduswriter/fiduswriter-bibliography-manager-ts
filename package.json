@@ -75,6 +75,8 @@
         "lint:fix": "eslint src --fix",
         "format": "prettier --write .",
         "format:check": "prettier --check .",
+        "extract-i18n": "node scripts/extract-i18n-generic.js ../fiduswriter-server-backend/fiduswriter/locale",
+        "compile-i18n": "node scripts/compile-i18n.js",
         "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config jest.config.js",
         "install-hooks": "husky",
         "build:demo": "node scripts/build-demo.mjs",
